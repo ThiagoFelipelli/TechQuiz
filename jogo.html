@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogar: TechQuiz Banco de Dados</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="perguntas-backup.js" defer></script>
+  <script src="jogo.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html">TechQuiz</a>
+  </header>
+
+  <main class="conteudo">
+    <!-- Bloco 1: progresso -->
+    <p id="progresso" class="progresso">Pergunta 1 de 4</p>
+
+    <!-- Bloco 2: pergunta -->
+    <h1 id="pergunta" class="pergunta">Aqui vai aparecer a pergunta.</h1>
+
+    <!-- Bloco 3: alternativas (o CP2 cria uma por item do JSON) -->
+    <div id="alternativas" class="alternativas">
+      <button type="button" class="alternativa" disabled>Alternativa A</button>
+      <button type="button" class="alternativa" disabled>Alternativa B</button>
+      <button type="button" class="alternativa" disabled>Alternativa C</button>
+      <button type="button" class="alternativa" disabled>Alternativa D</button>
+    </div>
+
+    <!-- Bloco 4: feedback (explicação e fonte, aparece após responder) -->
+    <section id="feedback" class="feedback" aria-live="polite">
+      <p>Aqui vai aparecer se você acertou, a explicação e o link da fonte.</p>
+    </section>
+
+    <!-- Bloco 5: navegação -->
+    <button id="proxima" type="button" class="botao" disabled>Próxima pergunta</button>
+  </main>
+</body>
+</html>

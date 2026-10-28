@@ -1,0 +1,50 @@
+[
+  {
+    "pergunta": "Em um banco de dados relacional, qual é a principal função de uma chave estrangeira (Foreign Key)?",
+    "alternativas": [
+      "Criptografar os dados de uma tabela",
+      "Garantir a integridade referencial entre duas tabelas",
+      "Acelerar todas as consultas de leitura",
+      "Impedir que a tabela receba novos registros"
+    ],
+    "resposta": 1,
+    "explicacao": "A chave estrangeira liga uma tabela a outra e impede referências a registros que não existem, mantendo a integridade referencial.",
+    "fonte": "https://www.postgresql.org/docs/current/ddl-constraints.html"
+  },
+  {
+    "pergunta": "Qual tipo de junção (JOIN) retorna todos os registros da tabela à esquerda e apenas os correspondentes da tabela à direita?",
+    "alternativas": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "LEFT JOIN",
+      "CROSS JOIN"
+    ],
+    "resposta": 2,
+    "explicacao": "O LEFT JOIN preserva todas as linhas da tabela à esquerda e preenche com NULL onde não há correspondência na tabela à direita.",
+    "fonte": "https://www.postgresql.org/docs/current/queries-table-expressions.html"
+  },
+  {
+    "pergunta": "Qual é a principal vantagem e o principal ponto de atenção no uso de índices em tabelas grandes?",
+    "alternativas": [
+      "Aceleram as leituras, mas deixam inserções e atualizações mais lentas",
+      "Aceleram as inserções, mas deixam as leituras mais lentas",
+      "Reduzem o espaço em disco e não têm desvantagens",
+      "Substituem a necessidade de chave primária"
+    ],
+    "resposta": 0,
+    "explicacao": "O índice acelera consultas de leitura, mas precisa ser atualizado a cada inserção, alteração ou exclusão, o que custa desempenho e espaço.",
+    "fonte": "https://www.postgresql.org/docs/current/indexes-intro.html"
+  },
+  {
+    "pergunta": "O que uma chave primária (Primary Key) garante em uma tabela?",
+    "alternativas": [
+      "Que a tabela terá no máximo 100 linhas",
+      "Que os dados serão copiados para outro servidor",
+      "Que cada linha pode ser identificada de forma única",
+      "Que todas as colunas aceitam valores nulos"
+    ],
+    "resposta": 2,
+    "explicacao": "A chave primária identifica cada linha de forma única: seus valores não se repetem e não podem ser nulos.",
+    "fonte": "https://www.postgresql.org/docs/current/ddl-constraints.html"
+  }
+]

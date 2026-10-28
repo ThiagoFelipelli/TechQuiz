@@ -1,0 +1,102 @@
+/* TechQuiz: CSS base. Paleta, tipografia e componentes reutilizados nas duas páginas. */
+:root {
+  --fundo: #f3f6f9;
+  --cartao: #ffffff;
+  --texto: #10243a;
+  --suave: #4a5b6e;
+  --borda: #c9d4df;
+  --marca: #0b2540;
+  --destaque: #0f766e;       /* verde-azulado: botões e foco */
+  --destaque-escuro: #0b5a54;
+  --certo: #166534;
+  --errado: #991b1b;
+  --fonte-texto: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --fonte-marca: Consolas, "Courier New", monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--fonte-texto);
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+  overflow-wrap: break-word;      /* evita rolagem horizontal no celular */
+}
+
+/* Topo com a marca */
+.topo { background: var(--marca); padding: 14px 20px; }
+.marca {
+  font-family: var(--fonte-marca);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Conteúdo central */
+.conteudo { max-width: 640px; margin: 0 auto; padding: 32px 20px 48px; }
+.tema { color: var(--suave); margin-bottom: 8px; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin-bottom: 16px; color: var(--marca); }
+.descricao { max-width: 60ch; margin-bottom: 20px; }
+.resumo { margin: 0 0 28px 20px; color: var(--suave); }
+.resumo li { margin-bottom: 4px; }
+
+/* Botão principal (também usado como link) */
+.botao {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  padding: 12px 24px;
+  background: var(--destaque);
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover:not(:disabled) { background: var(--destaque-escuro); }
+.botao:disabled { background: #94a3b0; cursor: not-allowed; }
+
+/* Foco visível para teclado */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+/* Tela de jogo */
+.progresso { color: var(--suave); margin-bottom: 8px; }
+.pergunta { font-size: 1.4rem; margin-bottom: 20px; }
+.alternativas { display: grid; gap: 10px; margin-bottom: 20px; }
+.alternativa {
+  font: inherit;
+  text-align: left;
+  padding: 12px 14px;
+  background: var(--cartao);
+  color: var(--texto);
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.alternativa:hover:not(:disabled) { border-color: var(--destaque); }
+.alternativa:disabled { color: var(--suave); cursor: default; }
+.alternativa.certa  { border-color: var(--certo);  background: #dcfce7; color: var(--texto); }
+.alternativa.errada { border-color: var(--errado); background: #fee2e2; color: var(--texto); }
+
+.feedback {
+  background: var(--cartao);
+  border-left: 5px solid var(--destaque);
+  border-radius: 4px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  color: var(--suave);
+}
+.feedback a { color: var(--destaque-escuro); }
+
+/* Rodapé */
+.rodape { max-width: 640px; margin: 0 auto; padding: 0 20px 32px; color: var(--suave); font-size: 0.9rem; }
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  .botao { width: 100%; text-align: center; }
+}
